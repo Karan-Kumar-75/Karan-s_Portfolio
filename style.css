@@ -1577,6 +1577,19 @@ ul {
     transform: translateY(0);
 }
 
+/* Mobile Menu Slide-in Animation */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
@@ -1624,6 +1637,7 @@ ul {
         display: flex;
     }
 
+    /* Hide nav menu by default on mobile */
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -1644,11 +1658,56 @@ ul {
         border-top: 1px solid var(--border-color);
     }
 
+    /* Hide all list items inside nav-menu on mobile by default */
+    .nav-menu li {
+        display: none;
+    }
+
+    /* Show menu when active */
     .nav-menu.active {
         max-height: 500px;
         opacity: 1;
         visibility: visible;
         padding: var(--spacing-md);
+    }
+
+    /* Show list items when menu is active */
+    .nav-menu.active li {
+        display: block;
+        animation: slideInFromTop 0.3s ease forwards;
+    }
+
+    /* Stagger animation for menu items */
+    .nav-menu.active li:nth-child(1) {
+        animation-delay: 0.05s;
+    }
+
+    .nav-menu.active li:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .nav-menu.active li:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+
+    .nav-menu.active li:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+
+    .nav-menu.active li:nth-child(5) {
+        animation-delay: 0.25s;
+    }
+
+    .nav-menu.active li:nth-child(6) {
+        animation-delay: 0.3s;
+    }
+
+    .nav-menu.active li:nth-child(7) {
+        animation-delay: 0.35s;
+    }
+
+    .nav-menu.active li:nth-child(8) {
+        animation-delay: 0.4s;
     }
 
     .nav-link {
