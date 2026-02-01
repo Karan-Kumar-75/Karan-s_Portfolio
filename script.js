@@ -1,8 +1,4 @@
-/* ================================================
-   ANIMATED PORTFOLIO - PROFESSIONAL JAVASCRIPT
-   Author: Karan Kumar
-   Description: Animation and interactivity logic
-   ================================================ */
+
 
 // ============================================
 // INITIALIZATION
