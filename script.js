@@ -15,30 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ============================================
-// THEME TOGGLE (LIGHT/DARK MODE)
+// THEME - PERMANENT DARK MODE
 // ============================================
 function initializeTheme() {
-    const themeToggle = document.getElementById('themeToggle');
-    const htmlElement = document.documentElement;
-
-    // Check for saved theme preference or default to dark mode
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    htmlElement.setAttribute('data-theme', currentTheme);
-
-    // Theme toggle click handler
-    themeToggle.addEventListener('click', function () {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-
-        // Add smooth transition effect
-        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-        setTimeout(() => {
-            document.body.style.transition = '';
-        }, 300);
-    });
+    // Set permanent dark theme
+    document.documentElement.setAttribute('data-theme', 'dark');
 }
 
 // ============================================
@@ -49,12 +30,12 @@ function initializeNavigation() {
     const sections = document.querySelectorAll('.section, .hero-section');
     const navbar = document.getElementById('navbar');
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links (only for hash links on same page)
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
-            // Only handle internal links
+            // Only handle hash links (for single-page sections)
             if (href && href.startsWith('#')) {
                 e.preventDefault();
 
@@ -75,6 +56,7 @@ function initializeNavigation() {
                     });
                 }
             }
+            // For page links (.html), let default behavior happen
         });
     });
 
@@ -88,6 +70,21 @@ function initializeNavigation() {
                 ticking = false;
             });
             ticking = true;
+        }
+    });
+
+    // Set active nav link based on current page
+    setActiveNavLinkByPage();
+}
+
+function setActiveNavLinkByPage() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
         }
     });
 }
@@ -128,10 +125,19 @@ function updateNavbarOnScroll(navbar) {
 function initializeMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navMenu = document.getElementById('navMenu');
+    const mobileBackdrop = document.getElementById('mobileBackdrop');
 
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
+            const isActive = navMenu.classList.toggle('active');
+
+            // Toggle backdrop
+            if (mobileBackdrop) {
+                mobileBackdrop.classList.toggle('active', isActive);
+            }
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isActive ? 'hidden' : '';
 
             // Animate hamburger icon
             const spans = this.querySelectorAll('span');
@@ -147,7 +153,22 @@ function initializeMobileMenu() {
             }
         });
 
-        // Close menu when clicking outside
+        // Close menu when clicking backdrop
+        if (mobileBackdrop) {
+            mobileBackdrop.addEventListener('click', function () {
+                navMenu.classList.remove('active');
+                mobileBackdrop.classList.remove('active');
+                document.body.style.overflow = '';
+
+                // Reset hamburger icon
+                const spans = mobileMenuToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            });
+        }
+
+        // Close menu when clicking outside (legacy support)
         document.addEventListener('click', function (e) {
             if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 if (navMenu.classList.contains('active')) {
