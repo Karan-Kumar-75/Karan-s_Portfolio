@@ -677,6 +677,34 @@ ul {
     box-shadow: var(--glow-blue);
 }
 
+/* Resume Button */
+.resume-button-container {
+    margin: var(--spacing-xl) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-resume {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: var(--glow-pink);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.btn-resume:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 143, 177, 0.5);
+}
+
+.btn-resume svg {
+    transition: transform var(--transition-base);
+}
+
+.btn-resume:hover svg {
+    transform: scale(1.1) rotate(-5deg);
+}
+
 /* Social Links - Glass Circles */
 .hero-social {
     display: flex;
@@ -833,7 +861,7 @@ ul {
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: var(--spacing-2xl);
-    align-items: center;
+    align-items: start;
 
     background: var(--glass-bg-light);
     backdrop-filter: var(--glass-blur);
@@ -1044,6 +1072,176 @@ ul {
 .timeline-detail {
     color: var(--text-secondary);
     line-height: 1.7;
+}
+
+/* Diploma & Class X Section Specific Styles */
+.diploma-section,
+.class-x-section {
+    position: relative;
+}
+
+.diploma-title,
+.class-x-title {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: var(--spacing-md);
+}
+
+.diploma-title:hover,
+.class-x-title:hover {
+    color: var(--primary-blue);
+}
+
+.expand-icon {
+    font-size: 1rem;
+    margin-left: var(--spacing-sm);
+    transition: transform var(--transition-base);
+    color: var(--primary-blue);
+}
+
+.diploma-title.active .expand-icon,
+.class-x-title.active .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Academic Results Container */
+.academic-results {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s var(--ease-glass),
+        opacity 0.4s var(--ease-glass),
+        margin-top 0.5s var(--ease-glass);
+    margin-top: 0;
+}
+
+.academic-results.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    margin-top: var(--spacing-lg);
+}
+
+/* Results Header */
+.results-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--glass-border);
+}
+
+.results-header h4 {
+    font-size: 1.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-xs);
+}
+
+.results-institution {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Results Table Container */
+.results-table-container {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    background: var(--glass-bg-medium);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-glass-sm);
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.results-table thead {
+    background: var(--glass-bg-light);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.results-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--glass-border);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.results-table tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.results-table tbody tr:hover {
+    background: var(--glass-bg-subtle);
+}
+
+.results-table tbody tr.semester-row {
+    border-top: 2px solid var(--glass-border);
+}
+
+.results-table td {
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.semester-cell {
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    text-align: center;
+    background: var(--glass-gradient);
+    vertical-align: middle;
+}
+
+.results-table td:nth-child(2) {
+    color: var(--text-primary);
+}
+
+.results-table td:nth-child(3) {
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+}
+
+.pending {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* CGPA Footer */
+.cgpa-footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: var(--glass-gradient);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+}
+
+.cgpa-footer p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.cgpa-footer strong {
+    color: var(--primary-blue);
 }
 
 /* ============================================
@@ -1868,6 +2066,28 @@ ul {
 
     .contact-cards {
         grid-template-columns: 1fr;
+    }
+
+    /* Diploma Academic Results - Mobile */
+    .results-table {
+        font-size: 0.8rem;
+    }
+
+    .results-table th,
+    .results-table td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .semester-cell {
+        font-size: 1rem;
+    }
+
+    .results-header h4 {
+        font-size: 1.25rem;
+    }
+
+    .results-institution {
+        font-size: 0.85rem;
     }
 }
 

@@ -1,5 +1,4 @@
 
-
 // ============================================
 // INITIALIZATION
 // ============================================
@@ -12,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeSkillBars();
     initializeCounters();
     initializeBackToTop();
+    initializeDiplomaToggle();
 });
 
 // ============================================
@@ -328,6 +328,51 @@ function initializeCounters() {
     counters.forEach(counter => {
         counterObserver.observe(counter);
     });
+}
+
+// ============================================
+// DIPLOMA & CLASS X ACADEMIC RESULTS TOGGLE
+// ============================================
+function initializeDiplomaToggle() {
+    // Diploma section toggle
+    const diplomaTitle = document.getElementById('diplomaTitle');
+    const academicResults = document.getElementById('academicResults');
+
+    if (diplomaTitle && academicResults) {
+        diplomaTitle.addEventListener('click', function () {
+            const isExpanded = academicResults.classList.contains('expanded');
+
+            if (isExpanded) {
+                // Collapse
+                academicResults.classList.remove('expanded');
+                diplomaTitle.classList.remove('active');
+            } else {
+                // Expand
+                academicResults.classList.add('expanded');
+                diplomaTitle.classList.add('active');
+            }
+        });
+    }
+
+    // Class X section toggle
+    const classXTitle = document.getElementById('classXTitle');
+    const classXResults = document.getElementById('classXResults');
+
+    if (classXTitle && classXResults) {
+        classXTitle.addEventListener('click', function () {
+            const isExpanded = classXResults.classList.contains('expanded');
+
+            if (isExpanded) {
+                // Collapse
+                classXResults.classList.remove('expanded');
+                classXTitle.classList.remove('active');
+            } else {
+                // Expand
+                classXResults.classList.add('expanded');
+                classXTitle.classList.add('active');
+            }
+        });
+    }
 }
 
 // ============================================

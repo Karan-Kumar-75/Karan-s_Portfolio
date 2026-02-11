@@ -32,7 +32,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-brand">
-                <img src="profile.jpg" alt="Karan Kumar" class="nav-logo">
+                <img src="assets/images/profile.jpg" alt="Karan Kumar" class="nav-logo">
             </a>
 
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
@@ -174,7 +174,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-image-container">
-                        <img src="profile.jpg" alt="Karan Kumar" class="profile-image">
+                        <img src="assets/images/profile.jpg" alt="Karan Kumar" class="profile-image">
                     </div>
                 </div>
 
@@ -195,6 +195,22 @@
                         real-world applications. I believe in continuous learning and staying updated with the latest
                         technologies in the data science ecosystem.
                     </p>
+
+                    <!-- Resume Button -->
+                    <div class="resume-button-container">
+                        <a href="assets/documents/Resume for Freelanece.pdf" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-resume">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <span>View Resume</span>
+                        </a>
+                    </div>
 
                     <div class="about-stats">
                         <div class="stat-item">
@@ -226,27 +242,218 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content diploma-section">
                         <span class="timeline-date">2023 - 2026</span>
-                        <h3>Diploma in Computer Science & Engineering</h3>
+                        <h3 class="diploma-title" id="diplomaTitle">
+                            Diploma in Computer Science & Engineering
+                            <span class="expand-icon">▼</span>
+                        </h3>
                         <h4>Birsa Institute of Technology (Trust), Ranchi</h4>
                         <p class="timeline-detail">
                             <strong>CGPA: 7.5</strong> | Currently pursuing diploma with focus on Computer Science
                             fundamentals, Data Structures, DBMS, Operating Systems, and Data Science.
                         </p>
+
+                        <!-- Academic Results Table (Initially Hidden) -->
+                        <div class="academic-results" id="academicResults">
+                            <div class="results-header">
+                                <h4>Academic Results</h4>
+                                <p class="results-institution">Birsa Institute of Technology (Trust), Ranchi</p>
+                            </div>
+
+                            <div class="results-table-container">
+                                <table class="results-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Semester</th>
+                                            <th>Subjects</th>
+                                            <th>Marks</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 1st Semester -->
+                                        <tr class="semester-row">
+                                            <td rowspan="5" class="semester-cell">1st</td>
+                                            <td>Applied Math (AEC01)</td>
+                                            <td>40</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Applied Physics (DSC01)</td>
+                                            <td>59</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Applied Chemistry (DSC02)</td>
+                                            <td>46</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Communication Skills (AEC02)</td>
+                                            <td>58</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fundamentals of ICT (SEC02)</td>
+                                            <td>70</td>
+                                        </tr>
+
+                                        <!-- 2nd Semester -->
+                                        <tr class="semester-row">
+                                            <td rowspan="5" class="semester-cell">2nd</td>
+                                            <td>Project Management Skill (SEC201)</td>
+                                            <td>76</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Statistics and Analytics (AEC201)</td>
+                                            <td>67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fundamentals of Electrical & Electronic Engineering (BSC201)</td>
+                                            <td>66</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Python Programming (CSE201)</td>
+                                            <td>69</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Environmental Sustainability (AUC201)</td>
+                                            <td>72</td>
+                                        </tr>
+
+                                        <!-- 3rd Semester -->
+                                        <tr class="semester-row">
+                                            <td rowspan="5" class="semester-cell">3rd</td>
+                                            <td>Advanced Python Programming (CSE301)</td>
+                                            <td>62</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Computer Hardware Maintenance and Administration (CSE302)</td>
+                                            <td>74</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Computer Networks (CSE303)</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Database System Concepts and PL/SQL (CSE304)</td>
+                                            <td>48</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Professional Skills (AUC301)</td>
+                                            <td>47</td>
+                                        </tr>
+
+                                        <!-- 4th Semester -->
+                                        <tr class="semester-row">
+                                            <td rowspan="4" class="semester-cell">4th</td>
+                                            <td>Data structures with Python (CSE401)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Operating System and Administration (CSE402)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Object Oriented Programming and Design with Java (CSE403)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Software Engineering principles and practices (CSE404)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+
+                                        <!-- 5th Semester -->
+                                        <tr class="semester-row">
+                                            <td rowspan="5" class="semester-cell">5th</td>
+                                            <td>Artificial Intelligence and Machine Learning (CSEC501)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Entrepreneurship Development and Startups (COMC501)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IOT (Internet of Things) (CSEPE503)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Human Values (CSEOE505)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>REGIONAL LANGUAGE (MARATHI) (AUC507)</td>
+                                            <td class="pending">Pending</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="cgpa-footer">
+                                <p><strong>Overall CGPA:</strong> 7.5</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content class-x-section">
                         <span class="timeline-date">2023</span>
-                        <h3>Class X (Matriculation)</h3>
+                        <h3 class="class-x-title" id="classXTitle">
+                            Class X (Matriculation)
+                            <span class="expand-icon">▼</span>
+                        </h3>
                         <h4>Premchand High School, Mesra, Ranchi</h4>
                         <p class="timeline-detail">
                             <strong>Percentage: 83.2%</strong> | Completed secondary education with strong foundation in
                             Science and Mathematics.
                         </p>
+
+                        <!-- Academic Results Table (Initially Hidden) -->
+                        <div class="academic-results" id="classXResults">
+                            <div class="results-header">
+                                <h4>Academic Results</h4>
+                                <p class="results-institution">Premchand High School, Mesra, Ranchi</p>
+                            </div>
+
+                            <div class="results-table-container">
+                                <table class="results-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Total Marks</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Hindi-A</td>
+                                            <td>87</td>
+                                        </tr>
+                                        <tr>
+                                            <td>English</td>
+                                            <td>77</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>84</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>83</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sanskrit</td>
+                                            <td>85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Social Science</td>
+                                            <td>75</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="cgpa-footer">
+                                <p><strong>Overall Percentage:</strong> 83.2%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
