@@ -1,0 +1,130 @@
+/* ============================================
+   DESIGN TOKENS & CSS VARIABLES
+   Karan Kumar Portfolio
+   ============================================ */
+
+:root {
+    /* Glass Effect Variables */
+    --glass-bg-light: rgba(255, 255, 255, 0.7);
+    --glass-bg-medium: rgba(255, 255, 255, 0.5);
+    --glass-bg-subtle: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-highlight: rgba(255, 255, 255, 0.5);
+    --glass-blur: blur(20px);
+    --glass-blur-strong: blur(24px);
+
+    /* Soft Color Palette - Light Mode */
+    --primary-blue: #5B7CFF;
+    --primary-violet: #9F7AFF;
+    --accent-pink: #FF8FB1;
+    --accent-sky: #4FACFE;
+
+    /* Gradients */
+    --glass-gradient: linear-gradient(135deg,
+            rgba(91, 124, 255, 0.1) 0%,
+            rgba(159, 122, 255, 0.1) 100%);
+    --primary-gradient: linear-gradient(135deg, #5B7CFF 0%, #9F7AFF 100%);
+    --accent-gradient: linear-gradient(135deg, #FF8FB1 0%, #FFC371 100%);
+    --sky-gradient: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);
+
+    /* Background Colors */
+    --bg-primary: #F5F7FA;
+    --bg-secondary: #FFFFFF;
+    --bg-overlay: rgba(255, 255, 255, 0.95);
+
+    /* Text Colors */
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-tertiary: #718096;
+    --text-muted: #A0AEC0;
+
+    /* Border & Shadow */
+    --border-color: rgba(0, 0, 0, 0.06);
+    --border-glass: rgba(255, 255, 255, 0.18);
+
+    /* Glass Shadows - Layered for depth */
+    --shadow-glass-sm:
+        0 2px 16px -2px rgba(0, 0, 0, 0.05),
+        0 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+    --shadow-glass-md:
+        0 8px 32px -4px rgba(0, 0, 0, 0.08),
+        0 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+    --shadow-glass-lg:
+        0 16px 48px -8px rgba(0, 0, 0, 0.1),
+        0 0px 0px 1px rgba(255, 255, 255, 0.6) inset;
+    --shadow-glass-xl:
+        0 24px 64px -12px rgba(0, 0, 0, 0.12),
+        0 0px 0px 1px rgba(255, 255, 255, 0.7) inset;
+
+    /* Glow Shadows */
+    --glow-blue: 0 8px 32px rgba(91, 124, 255, 0.25);
+    --glow-violet: 0 8px 32px rgba(159, 122, 255, 0.25);
+    --glow-pink: 0 8px 32px rgba(255, 143, 177, 0.25);
+
+    /* Typography */
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+
+    /* Border Radius - Large for glass aesthetic */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+    --radius-2xl: 32px;
+    --radius-full: 9999px;
+
+    /* Smooth Transitions - iOS-like */
+    --ease-glass: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-fast: 200ms var(--ease-glass);
+    --transition-base: 300ms var(--ease-glass);
+    --transition-slow: 500ms var(--ease-glass);
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --glass-bg-light: rgba(15, 23, 42, 0.7);
+    --glass-bg-medium: rgba(15, 23, 42, 0.5);
+    --glass-bg-subtle: rgba(15, 23, 42, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-highlight: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(24px);
+
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-overlay: rgba(15, 23, 42, 0.95);
+
+    --text-primary: #F1F5F9;
+    --text-secondary: #CBD5E1;
+    --text-tertiary: #94A3B8;
+    --text-muted: #64748B;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    --shadow-glass-sm:
+        0 2px 16px -2px rgba(0, 0, 0, 0.3),
+        0 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+    --shadow-glass-md:
+        0 8px 32px -4px rgba(0, 0, 0, 0.4),
+        0 0px 0px 1px rgba(255, 255, 255, 0.08) inset;
+    --shadow-glass-lg:
+        0 16px 48px -8px rgba(0, 0, 0, 0.5),
+        0 0px 0px 1px rgba(255, 255, 255, 0.1) inset;
+    --shadow-glass-xl:
+        0 24px 64px -12px rgba(0, 0, 0, 0.6),
+        0 0px 0px 1px rgba(255, 255, 255, 0.12) inset;
+
+    --glow-blue: 0 8px 32px rgba(91, 124, 255, 0.4);
+    --glow-violet: 0 8px 32px rgba(159, 122, 255, 0.4);
+    --glow-pink: 0 8px 32px rgba(255, 143, 177, 0.4);
+}

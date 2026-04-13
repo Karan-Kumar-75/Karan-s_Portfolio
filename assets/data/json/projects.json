@@ -1,0 +1,29 @@
+[
+    {
+        "id": "self-driving-car",
+        "number": "01",
+        "title": "Self-Driving Toy Car",
+        "description": "An autonomous toy car equipped with obstacle avoidance capabilities using IoT sensors. Features wireless control and live camera feed for real-time monitoring and navigation.",
+        "tech": ["Python", "IoT", "Raspberry Pi"],
+        "github": "https://github.com/Karan-Kumar-75",
+        "icon": "car"
+    },
+    {
+        "id": "data-analytics-dashboard",
+        "number": "02",
+        "title": "Data Analytics Dashboard",
+        "description": "Interactive data visualization dashboard built with Python, featuring real-time data analysis, statistical insights, and comprehensive reporting capabilities.",
+        "tech": ["Python", "Pandas", "Matplotlib"],
+        "github": "https://github.com/Karan-Kumar-75",
+        "icon": "chart"
+    },
+    {
+        "id": "ml-model",
+        "number": "03",
+        "title": "Machine Learning Model",
+        "description": "Predictive machine learning model for data classification using scikit-learn. Implements multiple algorithms with data preprocessing and model evaluation metrics.",
+        "tech": ["Python", "NumPy", "Scikit-learn"],
+        "github": "https://github.com/Karan-Kumar-75",
+        "icon": "cube"
+    }
+]

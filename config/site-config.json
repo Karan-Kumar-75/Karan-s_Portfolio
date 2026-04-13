@@ -1,0 +1,24 @@
+{
+    "site": {
+        "title": "Karan Kumar - Data Science & Analytics Portfolio",
+        "description": "Computer Science Engineering Student specializing in Data Science & Analytics",
+        "author": "Karan Kumar",
+        "url": "https://karan-kumar-75.github.io/Karan-s_Portfolio",
+        "email": "karankr9237@gmail.com",
+        "phone": "+919263427937",
+        "location": "Ranchi, India"
+    },
+    "social": {
+        "github": "https://github.com/Karan-Kumar-75",
+        "linkedin": "https://www.linkedin.com/in/karankumar75/",
+        "twitter": "https://x.com/karan_kumar_75",
+        "whatsapp": "https://wa.me/919263427937",
+        "telegram": "https://t.me/+919263427937"
+    },
+    "navigation": [
+        { "label": "Home", "href": "index.html" },
+        { "label": "About", "href": "about.html" },
+        { "label": "Projects", "href": "projects.html" },
+        { "label": "Contact", "href": "contact.html" }
+    ]
+}
