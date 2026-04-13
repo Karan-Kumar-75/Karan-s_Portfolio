@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeMobileMenu();
     initializeTypingAnimation();
     initializeScrollAnimations();
-    initializeSkillBars();
     initializeCounters();
     initializeBackToTop();
 });
@@ -230,7 +229,6 @@ function initializeScrollAnimations() {
                 // Add staggered animation for children
                 if (entry.target.classList.contains('about-content') ||
                     entry.target.classList.contains('projects-grid') ||
-                    entry.target.classList.contains('achievements-grid') ||
                     entry.target.classList.contains('contact-cards')) {
 
                     const children = entry.target.children;
@@ -248,10 +246,7 @@ function initializeScrollAnimations() {
     // Observe all animated elements
     const animatedElements = document.querySelectorAll(`
         .about-content,
-        .timeline-item,
-        .skill-group,
         .project-card,
-        .achievement-card,
         .contact-card
     `);
 
