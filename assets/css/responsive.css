@@ -5,14 +5,22 @@
 
 /* -------- TABLET & BELOW (≤ 992px) -------- */
 @media (max-width: 992px) {
+
+    /* --- Hero Section --- */
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--spacing-xl);
     }
 
     .hero-visual {
         max-width: 500px;
         margin: 0 auto;
+        order: 2;
+    }
+
+    .hero-text {
+        order: 1;
     }
 
     .hero-cta {
@@ -27,6 +35,11 @@
         justify-content: center;
     }
 
+    .hero-title-container {
+        justify-content: center;
+    }
+
+    /* --- About Section --- */
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -42,6 +55,7 @@
         justify-content: center;
     }
 
+    /* --- Projects Section --- */
     .project-card {
         padding: var(--spacing-lg);
     }
@@ -54,7 +68,7 @@
 /* -------- MOBILE (≤ 768px) -------- */
 @media (max-width: 768px) {
 
-    /* Navbar — shrink for mobile */
+    /* ===== Navbar ===== */
     .navbar {
         top: 8px;
         width: calc(100% - 16px);
@@ -136,34 +150,54 @@
         background: var(--glass-bg-medium);
     }
 
-    /* Hero */
+    /* ===== Hero Section ===== */
     .hero-section {
-        padding-top: 80px;
+        padding-top: 90px;
         min-height: auto;
         padding-bottom: var(--spacing-2xl);
     }
 
+    .hero-content {
+        gap: var(--spacing-lg);
+    }
+
     .hero-name {
-        font-size: clamp(2.5rem, 12vw, 4rem);
+        font-size: clamp(2.5rem, 10vw, 4rem);
     }
 
     .hero-title-container {
         justify-content: center;
-        min-height: 48px;
+        min-height: 44px;
+    }
+
+    .hero-title {
+        font-size: clamp(1rem, 4vw, 1.5rem);
     }
 
     .hero-subtitle {
         font-size: 1rem;
+        padding: 0 var(--spacing-xs);
     }
 
     .hero-visual {
         max-width: 100%;
+        width: 100%;
     }
 
     .code-window {
         animation: none;
+        width: 100%;
+        max-width: 100%;
     }
 
+    .code-content {
+        font-size: 0.8rem;
+        padding: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Blobs — shrink for mobile */
     .gradient-blob {
         filter: blur(80px);
     }
@@ -176,7 +210,37 @@
         display: none;
     }
 
-    /* Section */
+    /* ===== Buttons ===== */
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: var(--spacing-sm);
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 0.9rem 1.5rem;
+    }
+
+    /* ===== Social Links ===== */
+    .hero-social {
+        gap: var(--spacing-sm);
+    }
+
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* ===== Section ===== */
     .section {
         padding: var(--spacing-2xl) 0;
     }
@@ -189,7 +253,7 @@
         margin-bottom: var(--spacing-xl);
     }
 
-    /* About */
+    /* ===== About ===== */
     .about-content {
         padding: var(--spacing-md);
         gap: var(--spacing-lg);
@@ -212,7 +276,7 @@
         font-size: 0.75rem;
     }
 
-    /* Projects */
+    /* ===== Projects ===== */
     .project-card {
         padding: var(--spacing-md);
     }
@@ -241,7 +305,7 @@
         flex-wrap: wrap;
     }
 
-    /* Contact */
+    /* ===== Contact ===== */
     .contact-cards {
         grid-template-columns: 1fr;
     }
@@ -250,13 +314,13 @@
         font-size: 1rem;
     }
 
-    /* Footer */
+    /* ===== Footer ===== */
     .footer-links {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
 
-    /* 404 */
+    /* ===== 404 ===== */
     .error-code {
         font-size: clamp(4rem, 15vw, 8rem);
     }
@@ -276,46 +340,120 @@
         padding: 0 var(--spacing-sm);
     }
 
+    /* ===== Hero ===== */
     .hero-section {
-        padding-top: 70px;
+        padding-top: 75px;
+        padding-bottom: var(--spacing-xl);
     }
 
-    .hero-cta {
-        flex-direction: column;
-        width: 100%;
+    .hero-content {
+        gap: var(--spacing-md);
     }
 
-    .btn {
-        width: 100%;
-        justify-content: center;
+    .hero-name {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .hero-greeting {
+        font-size: 1rem;
+    }
+
+    .hero-title-container {
+        min-height: 40px;
+    }
+
+    .hero-title {
+        font-size: clamp(0.9rem, 4vw, 1.25rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .hero-cta .btn {
+        max-width: 100%;
         min-width: unset;
-        padding: 0.875rem 1.5rem;
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
     }
 
     .hero-social {
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xs);
     }
 
     .social-link {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
     }
 
     .social-link svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
+    /* Code window — prevent overflow */
+    .code-content {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+        line-height: 1.6;
+    }
+
+    .code-header {
+        padding: 0.75rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* ===== About ===== */
     .about-stats {
         grid-template-columns: 1fr;
     }
 
+    .about-image-container {
+        max-width: 180px;
+    }
+
+    /* ===== Contact ===== */
     .contact-card {
         padding: var(--spacing-md);
     }
 
+    /* ===== Nav ===== */
     .nav-logo {
         width: 36px;
         height: 36px;
+    }
+
+    .nav-container {
+        padding: 0.625rem var(--spacing-sm);
+    }
+}
+
+/* -------- EXTRA SMALL (≤ 360px) -------- */
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-cta .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .code-content {
+        font-size: 0.7rem;
+    }
+
+    .about-content {
+        padding: var(--spacing-sm);
     }
 }
