@@ -12,28 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const isOpen = panel.classList.contains('open');
 
             if (isOpen) {
-                // Close
                 panel.style.maxHeight = panel.scrollHeight + 'px';
                 requestAnimationFrame(() => {
                     panel.style.maxHeight = '0px';
                 });
                 panel.classList.remove('open');
                 btn.classList.remove('active');
-                btn.querySelector('.btn-text').textContent = 'View Marks';
+                btn.querySelector('.btn-text').textContent = 'View Detailed Marks';
+                btn.setAttribute('aria-expanded', 'false');
             } else {
-                // Open
                 panel.classList.add('open');
                 btn.classList.add('active');
                 btn.querySelector('.btn-text').textContent = 'Hide Marks';
+                btn.setAttribute('aria-expanded', 'true');
                 panel.style.maxHeight = panel.scrollHeight + 'px';
 
-                // Animate progress bars and chart bars after opening
                 setTimeout(() => {
                     animateProgressBars(panel);
                     animateChartBars(panel);
                 }, 100);
 
-                // Remove max-height constraint after animation to allow inner accordions
                 panel.addEventListener('transitionend', function handler() {
                     if (panel.classList.contains('open')) {
                         panel.style.maxHeight = 'none';
@@ -44,61 +42,182 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- Semester Accordion ----
-    const semesterHeaders = document.querySelectorAll('.edu-semester-header');
-    semesterHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const semester = header.closest('.edu-semester');
-            const body = semester.querySelector('.edu-semester-body');
-            const isOpen = semester.classList.contains('open');
+    // ---- Semester Tabs ----
+    const tabBtns = document.querySelectorAll('.edu-tab');
+    const tabPanels = document.querySelectorAll('.edu-semester-panel');
 
-            if (isOpen) {
-                // Close
-                body.style.maxHeight = body.scrollHeight + 'px';
-                requestAnimationFrame(() => {
-                    body.style.maxHeight = '0px';
-                });
-                semester.classList.remove('open');
-            } else {
-                // Close siblings first
-                const siblings = semester.parentElement.querySelectorAll('.edu-semester.open');
-                siblings.forEach(sib => {
-                    if (sib !== semester) {
-                        const sibBody = sib.querySelector('.edu-semester-body');
-                        sibBody.style.maxHeight = sibBody.scrollHeight + 'px';
-                        requestAnimationFrame(() => {
-                            sibBody.style.maxHeight = '0px';
-                        });
-                        sib.classList.remove('open');
-                    }
-                });
+    tabBtns.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const sem = tab.getAttribute('data-sem');
 
-                // Open this one
-                semester.classList.add('open');
-                body.style.maxHeight = body.scrollHeight + 'px';
+            // Update tab states
+            tabBtns.forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
 
-                // Animate progress bars inside this semester
-                setTimeout(() => {
-                    animateProgressBars(body);
-                }, 100);
+            // Update panel states
+            tabPanels.forEach(p => p.classList.remove('active'));
+            const targetPanel = document.querySelector(`.edu-semester-panel[data-sem="${sem}"]`);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+                // Animate progress bars in the new panel
+                setTimeout(() => animateProgressBars(targetPanel), 50);
+            }
 
-                body.addEventListener('transitionend', function handler() {
-                    if (semester.classList.contains('open')) {
-                        body.style.maxHeight = 'none';
-                    }
-                    body.removeEventListener('transitionend', handler);
-                });
+            // Clear search when switching tabs
+            const searchInput = document.getElementById('edu-subject-search');
+            if (searchInput && searchInput.value) {
+                searchInput.value = '';
+                clearSearch();
             }
         });
     });
 
+    // ---- Subject Search ----
+    const searchInput = document.getElementById('edu-subject-search');
+    const searchClear = document.getElementById('edu-search-clear');
+    const noResults = document.getElementById('edu-no-results');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.trim().toLowerCase();
+
+            // Toggle clear button visibility
+            if (searchClear) {
+                searchClear.classList.toggle('visible', query.length > 0);
+            }
+
+            if (query.length === 0) {
+                clearSearch();
+                return;
+            }
+
+            // Search across ALL semester panels
+            let totalMatches = 0;
+            let matchedSemester = null;
+
+            tabPanels.forEach(panel => {
+                const rows = panel.querySelectorAll('.edu-marks-table tbody tr');
+                let panelMatches = 0;
+
+                rows.forEach(row => {
+                    const subjectCell = row.querySelector('td:first-child');
+                    if (!subjectCell) return;
+
+                    const text = subjectCell.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        row.classList.remove('search-hidden');
+                        row.classList.add('search-highlight');
+                        panelMatches++;
+                        totalMatches++;
+                        if (!matchedSemester) matchedSemester = panel.getAttribute('data-sem');
+                    } else {
+                        row.classList.add('search-hidden');
+                        row.classList.remove('search-highlight');
+                    }
+                });
+            });
+
+            // Switch to the first matching semester tab
+            if (matchedSemester) {
+                const matchTab = document.querySelector(`.edu-tab[data-sem="${matchedSemester}"]`);
+                if (matchTab && !matchTab.classList.contains('active')) {
+                    matchTab.click();
+                    // Re-apply search after tab switch
+                    setTimeout(() => {
+                        tabPanels.forEach(panel => {
+                            const rows = panel.querySelectorAll('.edu-marks-table tbody tr');
+                            rows.forEach(row => {
+                                const subjectCell = row.querySelector('td:first-child');
+                                if (!subjectCell) return;
+                                const text = subjectCell.textContent.toLowerCase();
+                                if (text.includes(query)) {
+                                    row.classList.remove('search-hidden');
+                                    row.classList.add('search-highlight');
+                                } else {
+                                    row.classList.add('search-hidden');
+                                    row.classList.remove('search-highlight');
+                                }
+                            });
+                        });
+                    }, 50);
+                }
+            }
+
+            // Show/hide no results message
+            if (noResults) {
+                noResults.style.display = totalMatches === 0 ? 'block' : 'none';
+            }
+        });
+
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                searchClear.classList.remove('visible');
+                clearSearch();
+                searchInput.focus();
+            });
+        }
+    }
+
+    function clearSearch() {
+        const allRows = document.querySelectorAll('.edu-marks-table tbody tr');
+        allRows.forEach(row => {
+            row.classList.remove('search-hidden', 'search-highlight');
+        });
+        if (noResults) noResults.style.display = 'none';
+    }
+
+    // ---- PDF Download (Print) ----
+    const downloadBtn = document.getElementById('btn-download-marksheet');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+            // Ensure all panels are visible for print
+            const panels = document.querySelectorAll('.edu-semester-panel');
+            panels.forEach(p => p.classList.add('active'));
+
+            // Ensure marks panel is open
+            const marksPanel = document.getElementById('panel-diploma');
+            if (marksPanel) {
+                marksPanel.classList.add('open');
+                marksPanel.style.maxHeight = 'none';
+                marksPanel.style.opacity = '1';
+            }
+
+            // Set print widths for progress bars
+            const fills = document.querySelectorAll('.edu-progress-fill');
+            fills.forEach(fill => {
+                const w = fill.getAttribute('data-width');
+                if (w) fill.style.setProperty('--print-width', w + '%');
+            });
+
+            window.print();
+
+            // Restore tab state after print
+            setTimeout(() => {
+                panels.forEach(p => p.classList.remove('active'));
+                const activeTab = document.querySelector('.edu-tab.active');
+                if (activeTab) {
+                    const activeSem = activeTab.getAttribute('data-sem');
+                    const activePanel = document.querySelector(`.edu-semester-panel[data-sem="${activeSem}"]`);
+                    if (activePanel) activePanel.classList.add('active');
+                }
+            }, 500);
+        });
+    }
+
     // ---- Animate Progress Bars ----
     function animateProgressBars(container) {
         const fills = container.querySelectorAll('.edu-progress-fill, .edu-subject-card-fill');
-        fills.forEach(fill => {
+        fills.forEach((fill, i) => {
             const target = fill.getAttribute('data-width');
             if (target) {
-                fill.style.width = target + '%';
+                setTimeout(() => {
+                    fill.style.width = target + '%';
+                }, i * 30);
             }
         });
     }
