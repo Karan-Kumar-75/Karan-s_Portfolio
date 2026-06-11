@@ -1,0 +1,722 @@
+/* ============================================
+   EDUCATION SECTION — INTERACTIVE MARKS
+   ============================================ */
+
+/* ---- Education Cards Stack ---- */
+.edu-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* ---- Education Card ---- */
+.edu-card {
+    background: var(--glass-bg-medium);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.edu-card:hover {
+    box-shadow: var(--shadow-glass-md);
+}
+
+/* ---- Card Header ---- */
+.edu-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.edu-card-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.edu-card-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.edu-card-institution {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.edu-card-affiliation {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.edu-card-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.edu-card-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.02em;
+    box-shadow: var(--glow-blue);
+    white-space: nowrap;
+}
+
+.edu-card-date {
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ---- View Marks Button ---- */
+.edu-view-marks-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    color: var(--primary-blue);
+    background: var(--glass-bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.edu-view-marks-btn svg {
+    width: 14px;
+    height: 14px;
+    transition: transform var(--transition-base);
+}
+
+.edu-view-marks-btn:hover {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--glow-blue);
+    transform: translateY(-2px);
+}
+
+.edu-view-marks-btn:hover svg {
+    color: white;
+}
+
+.edu-view-marks-btn.active {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--glow-blue);
+}
+
+.edu-view-marks-btn.active svg {
+    transform: rotate(180deg);
+    color: white;
+}
+
+/* ---- Marks Panel (Collapsible) ---- */
+.edu-marks-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
+    opacity: 0;
+    border-top: 0 solid transparent;
+}
+
+.edu-marks-panel.open {
+    opacity: 1;
+    border-top: 1px solid var(--glass-border);
+}
+
+.edu-marks-content {
+    padding: var(--spacing-lg);
+}
+
+/* ---- Academic Highlights Bar ---- */
+.edu-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.edu-highlight-card {
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-xs);
+    background: var(--glass-bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.edu-highlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glass-sm);
+}
+
+.edu-highlight-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.edu-highlight-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+}
+
+/* ---- Semester Performance Chart ---- */
+.edu-chart-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.edu-chart-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edu-chart-title svg {
+    color: var(--primary-blue);
+    width: 16px;
+    height: 16px;
+}
+
+.edu-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 120px;
+    padding: var(--spacing-sm);
+    background: var(--glass-bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+}
+
+.edu-chart-bar-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.edu-chart-bar {
+    width: 100%;
+    max-width: 60px;
+    border-radius: var(--radius-sm) var(--radius-sm) 4px 4px;
+    background: var(--primary-gradient);
+    transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    min-height: 4px;
+    box-shadow: 0 -4px 12px rgba(91, 124, 255, 0.2);
+    cursor: pointer;
+}
+
+.edu-chart-bar:hover {
+    box-shadow: 0 -4px 20px rgba(91, 124, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+.edu-chart-bar-value {
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.edu-chart-bar-label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ---- Semester Accordion ---- */
+.edu-semesters {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.edu-semester {
+    background: var(--glass-bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.edu-semester:hover {
+    border-color: rgba(91, 124, 255, 0.3);
+}
+
+.edu-semester-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    user-select: none;
+    transition: all var(--transition-base);
+    gap: var(--spacing-sm);
+}
+
+.edu-semester-header:hover {
+    background: var(--glass-bg-subtle);
+}
+
+.edu-semester-header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+    min-width: 0;
+}
+
+.edu-semester-number {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: white;
+    background: var(--primary-gradient);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.edu-semester-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.edu-semester-header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.edu-semester-avg {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    padding: 3px 10px;
+    background: rgba(91, 124, 255, 0.1);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.edu-semester-chevron {
+    width: 18px;
+    height: 18px;
+    color: var(--text-tertiary);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+}
+
+.edu-semester.open .edu-semester-chevron {
+    transform: rotate(180deg);
+}
+
+/* ---- Semester Body ---- */
+.edu-semester-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edu-semester-body-inner {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+/* ---- Marks Table ---- */
+.edu-marks-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.edu-marks-table thead th {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.edu-marks-table thead th:last-child {
+    text-align: center;
+    width: 80px;
+}
+
+.edu-marks-table thead th:nth-child(3) {
+    text-align: center;
+    width: 180px;
+}
+
+.edu-marks-table tbody tr {
+    transition: background var(--transition-fast);
+}
+
+.edu-marks-table tbody tr:hover {
+    background: var(--glass-bg-subtle);
+}
+
+.edu-marks-table tbody td {
+    font-size: 0.8125rem;
+    padding: 10px 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    vertical-align: middle;
+}
+
+.edu-marks-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.edu-marks-table tbody td:last-child {
+    text-align: center;
+}
+
+.edu-subject-code {
+    font-size: 0.6875rem;
+    color: var(--text-tertiary);
+    display: block;
+    margin-top: 2px;
+    font-family: monospace;
+}
+
+/* ---- Progress Bar ---- */
+.edu-progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edu-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    min-width: 60px;
+}
+
+.edu-progress-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0;
+}
+
+.edu-progress-fill.grade-excellent {
+    background: linear-gradient(90deg, #10B981, #34D399);
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.edu-progress-fill.grade-good {
+    background: linear-gradient(90deg, #5B7CFF, #9F7AFF);
+    box-shadow: 0 0 8px rgba(91, 124, 255, 0.4);
+}
+
+.edu-progress-fill.grade-average {
+    background: linear-gradient(90deg, #F59E0B, #FBBF24);
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.edu-progress-fill.grade-low {
+    background: linear-gradient(90deg, #EF4444, #F87171);
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+/* ---- Marks Score Badge ---- */
+.edu-marks-score {
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.edu-marks-score.score-excellent {
+    color: #10B981;
+    background: rgba(16, 185, 129, 0.12);
+}
+
+.edu-marks-score.score-good {
+    color: var(--primary-blue);
+    background: rgba(91, 124, 255, 0.12);
+}
+
+.edu-marks-score.score-average {
+    color: #F59E0B;
+    background: rgba(245, 158, 11, 0.12);
+}
+
+.edu-marks-score.score-low {
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.edu-marks-score.score-pending {
+    color: var(--text-tertiary);
+    background: rgba(148, 163, 184, 0.12);
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+/* ---- Achievement Badge ---- */
+.edu-achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.edu-achievement-badge .badge-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    animation: achievementPulse 2s ease-in-out infinite;
+}
+
+@keyframes achievementPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.edu-achievement-text {
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #F59E0B;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ---- Matriculation Subjects Grid ---- */
+.edu-subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.edu-subject-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--spacing-sm);
+    background: var(--glass-bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.edu-subject-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glass-sm);
+}
+
+.edu-subject-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edu-subject-card-name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.edu-subject-card-score {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.edu-subject-card-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.edu-subject-card-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0;
+}
+
+/* ---- Download Marksheet Button ---- */
+.edu-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    color: var(--text-tertiary);
+    background: transparent;
+    border: 1px dashed var(--glass-border);
+    border-radius: var(--radius-full);
+    cursor: not-allowed;
+    opacity: 0.6;
+    margin-top: var(--spacing-sm);
+    transition: all var(--transition-base);
+}
+
+.edu-download-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.edu-download-btn:hover {
+    opacity: 0.8;
+    border-color: var(--text-tertiary);
+}
+
+/* ============================================
+   RESPONSIVE — EDUCATION SECTION
+   ============================================ */
+@media (max-width: 768px) {
+    .edu-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md);
+    }
+
+    .edu-card-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .edu-marks-content {
+        padding: var(--spacing-md);
+    }
+
+    .edu-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .edu-chart-bars {
+        height: 90px;
+        gap: 4px;
+    }
+
+    .edu-semester-header {
+        padding: var(--spacing-sm);
+    }
+
+    .edu-semester-header-left {
+        flex-wrap: wrap;
+    }
+
+    .edu-marks-table thead th:nth-child(3) {
+        display: none;
+    }
+
+    .edu-marks-table tbody td:nth-child(3) {
+        display: none;
+    }
+
+    .edu-subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-subject-card {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .edu-subject-card-header {
+        flex: 1;
+    }
+
+    .edu-subject-card-bar {
+        flex: 0 0 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edu-highlights {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .edu-highlight-value {
+        font-size: 1.25rem;
+    }
+
+    .edu-chart-bars {
+        height: 70px;
+    }
+
+    .edu-chart-bar-label {
+        font-size: 0.5rem;
+    }
+
+    .edu-semester-name {
+        font-size: 0.8125rem;
+    }
+
+    .edu-marks-table tbody td {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    .edu-marks-table thead th {
+        padding: 6px 8px;
+    }
+}

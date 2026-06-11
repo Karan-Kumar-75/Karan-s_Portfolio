@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/about-resume.css">
+    <link rel="stylesheet" href="assets/css/education.css">
 </head>
 
 <body>
@@ -270,7 +271,7 @@
                 <div class="resume-divider"></div>
 
                 <!-- Education -->
-                <section class="resume-section">
+                <section class="resume-section" id="education">
                     <h2 class="resume-section-title">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
@@ -278,32 +279,514 @@
                         </svg>
                         Education
                     </h2>
-                    <div class="resume-entries-stack">
-                        <div class="resume-entry">
-                            <div class="resume-entry-header">
-                                <div>
-                                    <h3 class="resume-entry-title">Diploma in Computer Science & Engineering</h3>
-                                    <p class="resume-entry-org">BITT Polytechnic, Ranchi</p>
+
+                    <div class="edu-cards-stack">
+
+                        <!-- ═══════════ DIPLOMA ═══════════ -->
+                        <div class="edu-card" id="edu-diploma">
+                            <div class="edu-card-header">
+                                <div class="edu-card-info">
+                                    <h3 class="edu-card-title">Diploma in Computer Science & Engineering</h3>
+                                    <p class="edu-card-institution">Birsa Institute of Technology (Trust), Ranchi</p>
+                                    <p class="edu-card-affiliation">Affiliated By JUT Ranchi</p>
                                 </div>
-                                <div class="resume-entry-meta">
-                                    <span class="resume-badge">7.5 CGPA</span>
-                                    <span class="resume-date">2023 – 2026</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resume-entry">
-                            <div class="resume-entry-header">
-                                <div>
-                                    <h3 class="resume-entry-title">Matriculation</h3>
-                                    <p class="resume-entry-org">Premchand High School</p>
-                                </div>
-                                <div class="resume-entry-meta">
-                                    <span class="resume-badge">83.2%</span>
-                                    <span class="resume-date">2022 – 2023</span>
+                                <div class="edu-card-actions">
+                                    <span class="edu-card-badge">CGPA: TBD</span>
+                                    <span class="edu-card-date">2023 – 2026</span>
+                                    <button class="edu-view-marks-btn" id="btn-diploma-marks" aria-expanded="false" aria-controls="panel-diploma">
+                                        <span class="btn-text">View Marks</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+
+                            <!-- Marks Panel -->
+                            <div class="edu-marks-panel" id="panel-diploma">
+                                <div class="edu-marks-content">
+
+                                    <!-- Academic Highlights -->
+                                    <div class="edu-highlights">
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">60.75</div>
+                                            <div class="edu-highlight-label">Avg. Marks (Sem 1–4)</div>
+                                        </div>
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">100</div>
+                                            <div class="edu-highlight-label">Highest Score</div>
+                                        </div>
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">20</div>
+                                            <div class="edu-highlight-label">Subjects Cleared</div>
+                                        </div>
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">6</div>
+                                            <div class="edu-highlight-label">Semesters</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Semester Performance Chart -->
+                                    <div class="edu-chart-section">
+                                        <div class="edu-chart-title">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9"></rect><rect x="10" y="7" width="4" height="14"></rect><rect x="17" y="3" width="4" height="18"></rect></svg>
+                                            Semester-wise Average Performance
+                                        </div>
+                                        <div class="edu-chart-bars">
+                                            <div class="edu-chart-bar-wrapper">
+                                                <div class="edu-chart-bar-value">54.6</div>
+                                                <div class="edu-chart-bar" data-height="54.6" style="height: 0%;"></div>
+                                                <div class="edu-chart-bar-label">Sem 1</div>
+                                            </div>
+                                            <div class="edu-chart-bar-wrapper">
+                                                <div class="edu-chart-bar-value">70.0</div>
+                                                <div class="edu-chart-bar" data-height="70" style="height: 0%;"></div>
+                                                <div class="edu-chart-bar-label">Sem 2</div>
+                                            </div>
+                                            <div class="edu-chart-bar-wrapper">
+                                                <div class="edu-chart-bar-value">58.2</div>
+                                                <div class="edu-chart-bar" data-height="58.2" style="height: 0%;"></div>
+                                                <div class="edu-chart-bar-label">Sem 3</div>
+                                            </div>
+                                            <div class="edu-chart-bar-wrapper">
+                                                <div class="edu-chart-bar-value">66.2</div>
+                                                <div class="edu-chart-bar" data-height="66.2" style="height: 0%;"></div>
+                                                <div class="edu-chart-bar-label">Sem 4</div>
+                                            </div>
+                                            <div class="edu-chart-bar-wrapper">
+                                                <div class="edu-chart-bar-value">—</div>
+                                                <div class="edu-chart-bar" data-height="5" style="height: 0%; opacity: 0.3;"></div>
+                                                <div class="edu-chart-bar-label">Sem 5</div>
+                                            </div>
+                                            <div class="edu-chart-bar-wrapper">
+                                                <div class="edu-chart-bar-value">—</div>
+                                                <div class="edu-chart-bar" data-height="5" style="height: 0%; opacity: 0.3;"></div>
+                                                <div class="edu-chart-bar-label">Sem 6</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Semester Accordions -->
+                                    <div class="edu-semesters">
+
+                                        <!-- Semester 1 -->
+                                        <div class="edu-semester">
+                                            <div class="edu-semester-header">
+                                                <div class="edu-semester-header-left">
+                                                    <span class="edu-semester-number">SEM 1</span>
+                                                    <span class="edu-semester-name">First Semester</span>
+                                                </div>
+                                                <div class="edu-semester-header-right">
+                                                    <span class="edu-semester-avg">Avg: 54.6</span>
+                                                    <svg class="edu-semester-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </div>
+                                            </div>
+                                            <div class="edu-semester-body">
+                                                <div class="edu-semester-body-inner">
+                                                    <table class="edu-marks-table">
+                                                        <thead>
+                                                            <tr><th>Subject</th><th>Marks</th><th>Progress</th><th>Score</th></tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Applied Math <span class="edu-subject-code">AEC01</span></td>
+                                                                <td><span class="edu-marks-score score-low">40</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-low" data-width="40"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-low">40/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Applied Physics <span class="edu-subject-code">DSC01</span></td>
+                                                                <td><span class="edu-marks-score score-average">59</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="59"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-average">59/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Applied Chemistry <span class="edu-subject-code">DSC02</span></td>
+                                                                <td><span class="edu-marks-score score-low">46</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-low" data-width="46"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-low">46/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Communication Skills <span class="edu-subject-code">AEC02</span></td>
+                                                                <td><span class="edu-marks-score score-average">58</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="58"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-average">58/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Fundamentals of ICT <span class="edu-subject-code">SEC02</span></td>
+                                                                <td><span class="edu-marks-score score-good">70</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="70"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">70/100</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semester 2 -->
+                                        <div class="edu-semester">
+                                            <div class="edu-semester-header">
+                                                <div class="edu-semester-header-left">
+                                                    <span class="edu-semester-number">SEM 2</span>
+                                                    <span class="edu-semester-name">Second Semester</span>
+                                                </div>
+                                                <div class="edu-semester-header-right">
+                                                    <span class="edu-semester-avg">Avg: 70.0</span>
+                                                    <svg class="edu-semester-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </div>
+                                            </div>
+                                            <div class="edu-semester-body">
+                                                <div class="edu-semester-body-inner">
+                                                    <table class="edu-marks-table">
+                                                        <thead>
+                                                            <tr><th>Subject</th><th>Marks</th><th>Progress</th><th>Score</th></tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Project Management Skill <span class="edu-subject-code">SEC201</span></td>
+                                                                <td><span class="edu-marks-score score-excellent">76</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-excellent" data-width="76"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-excellent">76/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Statistics and Analytics <span class="edu-subject-code">AEC201</span></td>
+                                                                <td><span class="edu-marks-score score-good">67</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="67"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">67/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Fundamentals of Electrical & Electronic Engg. <span class="edu-subject-code">BSC201</span></td>
+                                                                <td><span class="edu-marks-score score-good">66</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="66"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">66/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Python Programming <span class="edu-subject-code">CSE201</span></td>
+                                                                <td><span class="edu-marks-score score-good">69</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="69"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">69/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Environmental Sustainability <span class="edu-subject-code">AUC201</span></td>
+                                                                <td><span class="edu-marks-score score-good">72</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="72"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">72/100</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semester 3 -->
+                                        <div class="edu-semester">
+                                            <div class="edu-semester-header">
+                                                <div class="edu-semester-header-left">
+                                                    <span class="edu-semester-number">SEM 3</span>
+                                                    <span class="edu-semester-name">Third Semester</span>
+                                                </div>
+                                                <div class="edu-semester-header-right">
+                                                    <span class="edu-semester-avg">Avg: 58.2</span>
+                                                    <svg class="edu-semester-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </div>
+                                            </div>
+                                            <div class="edu-semester-body">
+                                                <div class="edu-semester-body-inner">
+                                                    <table class="edu-marks-table">
+                                                        <thead>
+                                                            <tr><th>Subject</th><th>Marks</th><th>Progress</th><th>Score</th></tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Advanced Python Programming <span class="edu-subject-code">CSE301</span></td>
+                                                                <td><span class="edu-marks-score score-good">62</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="62"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">62/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Computer Hardware Maintenance & Admin <span class="edu-subject-code">CSE302</span></td>
+                                                                <td><span class="edu-marks-score score-excellent">74</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-excellent" data-width="74"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-excellent">74/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Computer Networks <span class="edu-subject-code">CSE303</span></td>
+                                                                <td><span class="edu-marks-score score-good">60</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="60"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">60/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Database System Concepts & PL/SQL <span class="edu-subject-code">CSE304</span></td>
+                                                                <td><span class="edu-marks-score score-low">48</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-low" data-width="48"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-low">48/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Professional Skills <span class="edu-subject-code">AUC301</span></td>
+                                                                <td><span class="edu-marks-score score-low">47</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-low" data-width="47"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-low">47/100</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semester 4 -->
+                                        <div class="edu-semester">
+                                            <div class="edu-semester-header">
+                                                <div class="edu-semester-header-left">
+                                                    <span class="edu-semester-number">SEM 4</span>
+                                                    <span class="edu-semester-name">Fourth Semester</span>
+                                                </div>
+                                                <div class="edu-semester-header-right">
+                                                    <span class="edu-semester-avg">Avg: 66.2</span>
+                                                    <svg class="edu-semester-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </div>
+                                            </div>
+                                            <div class="edu-semester-body">
+                                                <div class="edu-semester-body-inner">
+                                                    <table class="edu-marks-table">
+                                                        <thead>
+                                                            <tr><th>Subject</th><th>Marks</th><th>Progress</th><th>Score</th></tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Data Structures with Python <span class="edu-subject-code">CSE401</span></td>
+                                                                <td><span class="edu-marks-score score-average">59</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="59"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-average">59/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Operating System and Administration <span class="edu-subject-code">CSE402</span></td>
+                                                                <td><span class="edu-marks-score score-good">61</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-good" data-width="61"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-good">61/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>OOP and Design with Java <span class="edu-subject-code">CSE403</span></td>
+                                                                <td><span class="edu-marks-score score-average">55</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="55"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-average">55/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Software Engineering Principles & Practices <span class="edu-subject-code">CSE404</span></td>
+                                                                <td><span class="edu-marks-score score-average">56</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="56"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-average">56/100</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Financial Literacy Arthnirmiti <span class="edu-subject-code">AUC401</span>
+                                                                    <span class="edu-achievement-badge"><span class="badge-icon">🏆</span><span class="edu-achievement-text">Perfect Score!</span></span>
+                                                                </td>
+                                                                <td><span class="edu-marks-score score-excellent">100</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-excellent" data-width="100"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-excellent">100/100</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semester 5 -->
+                                        <div class="edu-semester">
+                                            <div class="edu-semester-header">
+                                                <div class="edu-semester-header-left">
+                                                    <span class="edu-semester-number">SEM 5</span>
+                                                    <span class="edu-semester-name">Fifth Semester</span>
+                                                </div>
+                                                <div class="edu-semester-header-right">
+                                                    <span class="edu-semester-avg">Pending</span>
+                                                    <svg class="edu-semester-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </div>
+                                            </div>
+                                            <div class="edu-semester-body">
+                                                <div class="edu-semester-body-inner">
+                                                    <table class="edu-marks-table">
+                                                        <thead>
+                                                            <tr><th>Subject</th><th>Marks</th><th>Progress</th><th>Score</th></tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>AI and Machine Learning <span class="edu-subject-code">CSEC501</span></td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Entrepreneurship Development & Startups <span class="edu-subject-code">COMC501</span></td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>IoT (Internet of Things) <span class="edu-subject-code">CSEPE503</span></td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Human Values <span class="edu-subject-code">CSEOE505</span></td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regional Language (Marathi) <span class="edu-subject-code">AUC507</span></td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semester 6 -->
+                                        <div class="edu-semester">
+                                            <div class="edu-semester-header">
+                                                <div class="edu-semester-header-left">
+                                                    <span class="edu-semester-number">SEM 6</span>
+                                                    <span class="edu-semester-name">Sixth Semester</span>
+                                                </div>
+                                                <div class="edu-semester-header-right">
+                                                    <span class="edu-semester-avg">Pending</span>
+                                                    <svg class="edu-semester-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                                </div>
+                                            </div>
+                                            <div class="edu-semester-body">
+                                                <div class="edu-semester-body-inner">
+                                                    <table class="edu-marks-table">
+                                                        <thead>
+                                                            <tr><th>Subject</th><th>Marks</th><th>Progress</th><th>Score</th></tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Internship</td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>IKS</td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Project Report</td>
+                                                                <td><span class="edu-marks-score score-pending">Pending</span></td>
+                                                                <td><div class="edu-progress-wrapper"><div class="edu-progress-bar"><div class="edu-progress-fill grade-average" data-width="0"></div></div></div></td>
+                                                                <td><span class="edu-marks-score score-pending">—</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- /edu-semesters -->
+
+                                    <!-- Download Marksheet -->
+                                    <button class="edu-download-btn" disabled title="Marksheets coming soon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                        Download Marksheets (Coming Soon)
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div><!-- /edu-card diploma -->
+
+                        <!-- ═══════════ MATRICULATION ═══════════ -->
+                        <div class="edu-card" id="edu-matriculation">
+                            <div class="edu-card-header">
+                                <div class="edu-card-info">
+                                    <h3 class="edu-card-title">Matriculation (Class 10th)</h3>
+                                    <p class="edu-card-institution">Premchand High School, Mesra, Ranchi</p>
+                                </div>
+                                <div class="edu-card-actions">
+                                    <span class="edu-card-badge">83.2%</span>
+                                    <span class="edu-card-date">2022 – 2023</span>
+                                    <button class="edu-view-marks-btn" id="btn-matric-marks" aria-expanded="false" aria-controls="panel-matric">
+                                        <span class="btn-text">View Marks</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Marks Panel -->
+                            <div class="edu-marks-panel" id="panel-matric">
+                                <div class="edu-marks-content">
+
+                                    <!-- Academic Highlights -->
+                                    <div class="edu-highlights">
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">83.2%</div>
+                                            <div class="edu-highlight-label">Overall Percentage</div>
+                                        </div>
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">87</div>
+                                            <div class="edu-highlight-label">Highest (Hindi)</div>
+                                        </div>
+                                        <div class="edu-highlight-card">
+                                            <div class="edu-highlight-value">5</div>
+                                            <div class="edu-highlight-label">Subjects</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subject Cards -->
+                                    <div class="edu-subjects-grid">
+                                        <div class="edu-subject-card">
+                                            <div class="edu-subject-card-header">
+                                                <span class="edu-subject-card-name">Hindi</span>
+                                                <span class="edu-subject-card-score score-excellent" style="color: #10B981;">87
+                                                    <span class="edu-achievement-badge"><span class="badge-icon">⭐</span></span>
+                                                </span>
+                                            </div>
+                                            <div class="edu-subject-card-bar"><div class="edu-subject-card-fill grade-excellent" data-width="87"></div></div>
+                                        </div>
+                                        <div class="edu-subject-card">
+                                            <div class="edu-subject-card-header">
+                                                <span class="edu-subject-card-name">Mathematics</span>
+                                                <span class="edu-subject-card-score" style="color: #10B981; font-weight: 800;">84</span>
+                                            </div>
+                                            <div class="edu-subject-card-bar"><div class="edu-subject-card-fill grade-excellent" data-width="84"></div></div>
+                                        </div>
+                                        <div class="edu-subject-card">
+                                            <div class="edu-subject-card-header">
+                                                <span class="edu-subject-card-name">Science</span>
+                                                <span class="edu-subject-card-score" style="color: #10B981; font-weight: 800;">83</span>
+                                            </div>
+                                            <div class="edu-subject-card-bar"><div class="edu-subject-card-fill grade-excellent" data-width="83"></div></div>
+                                        </div>
+                                        <div class="edu-subject-card">
+                                            <div class="edu-subject-card-header">
+                                                <span class="edu-subject-card-name">English</span>
+                                                <span class="edu-subject-card-score" style="color: var(--primary-blue); font-weight: 800;">77</span>
+                                            </div>
+                                            <div class="edu-subject-card-bar"><div class="edu-subject-card-fill grade-good" data-width="77"></div></div>
+                                        </div>
+                                        <div class="edu-subject-card">
+                                            <div class="edu-subject-card-header">
+                                                <span class="edu-subject-card-name">Social Science</span>
+                                                <span class="edu-subject-card-score" style="color: #449aef; font-weight: 800;">75</span>
+                                            </div>
+                                            <div class="edu-subject-card-bar"><div class="edu-subject-card-fill grade-low" data-width="20"></div></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- /edu-card matriculation -->
+
+                    </div><!-- /edu-cards-stack -->
                 </section>
 
                 <div class="resume-divider"></div>
@@ -452,6 +935,7 @@
     <script src="assets/js/data-handler.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/projects.js"></script>
+    <script src="assets/js/education.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
