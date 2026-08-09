@@ -1,24 +1,25 @@
 {
     "site": {
-        "title": "Karan Kumar - Data Science & Analytics Portfolio",
-        "description": "Computer Science Engineering Student specializing in Data Science & Analytics",
+        "title": "Karan Kumar | Computer Science Engineering Student | Data Science & AI",
+        "description": "Karan Kumar is a Computer Science Engineering student focused on Data Science, Data Analytics, Artificial Intelligence, Power BI, Python, SQL, and data-driven applications.",
         "author": "Karan Kumar",
         "url": "https://karan-kumar-75.github.io/Karan-s_Portfolio",
-        "email": "karankr9237@gmail.com",
-        "phone": "+919263427937",
+        "email": "karankumarm956@gmail.com",
+        "phone": "+91-7549024932",
         "location": "Ranchi, India"
     },
     "social": {
         "github": "https://github.com/Karan-Kumar-75",
-        "linkedin": "https://www.linkedin.com/in/karankumar75/",
-        "twitter": "https://x.com/karan_kumar_75",
-        "whatsapp": "https://wa.me/919263427937",
-        "telegram": "https://t.me/+919263427937"
+        "linkedin": "https://www.linkedin.com/in/Karankumar75"
     },
     "navigation": [
-        { "label": "Home", "href": "index.html" },
-        { "label": "About", "href": "about.html" },
-        { "label": "Projects", "href": "projects.html" },
-        { "label": "Contact", "href": "contact.html" }
+        { "label": "Home", "href": "#home" },
+        { "label": "About", "href": "#about" },
+        { "label": "Education", "href": "#education" },
+        { "label": "Experience", "href": "#experience" },
+        { "label": "Skills", "href": "#skills" },
+        { "label": "Projects", "href": "#projects" },
+        { "label": "Certifications", "href": "#certifications" },
+        { "label": "Contact", "href": "#contact" }
     ]
 }

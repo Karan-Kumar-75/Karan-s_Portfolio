@@ -30,18 +30,27 @@ function initializeNavigation() {
                 const navMenu = document.getElementById('navMenu');
                 if (navMenu) navMenu.classList.remove('active');
 
+                // Close mobile menu hamburger animation
+                const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                if (mobileMenuToggle) {
+                    const spans = mobileMenuToggle.querySelectorAll('span');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+
                 const targetSection = document.querySelector(href);
                 if (targetSection) {
                     const navHeight = navbar.offsetHeight;
-                    const targetPosition = targetSection.offsetTop - navHeight;
+                    const targetPosition = targetSection.offsetTop - navHeight - 10;
                     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                 }
             }
-            // For multi-page links (about.html, projects.html, etc.), let default behavior work
+            // For multi-page links (about.html, etc.), let default behavior work
         });
     });
 
-    // Scroll spy — only for single-page sections
+    // Scroll spy
     if (sections.length > 0) {
         let ticking = false;
         window.addEventListener('scroll', function () {
@@ -56,13 +65,10 @@ function initializeNavigation() {
         });
     }
 
-    // Still apply scrolled class on multi-page sites
+    // Still apply scrolled class
     window.addEventListener('scroll', function () {
         updateNavbarOnScroll(navbar);
     });
-
-    // Highlight current page in nav
-    highlightCurrentPage(navLinks);
 }
 
 function updateActiveNavLink(sections, navbar, navLinks) {
@@ -93,22 +99,6 @@ function updateNavbarOnScroll(navbar) {
     } else {
         navbar.classList.remove('scrolled');
     }
-}
-
-/**
- * Highlight current page link in navigation
- */
-function highlightCurrentPage(navLinks) {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage ||
-            (currentPage === '' && href === 'index.html') ||
-            (currentPage === 'index.html' && href === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
 }
 
 /**

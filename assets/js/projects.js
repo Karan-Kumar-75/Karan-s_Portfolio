@@ -19,7 +19,10 @@ function initializeScrollAnimations() {
                 // Staggered animation for children
                 if (entry.target.classList.contains('about-content') ||
                     entry.target.classList.contains('projects-grid') ||
-                    entry.target.classList.contains('contact-cards')) {
+                    entry.target.classList.contains('contact-cards') ||
+                    entry.target.classList.contains('skills-grid') ||
+                    entry.target.classList.contains('certifications-grid') ||
+                    entry.target.classList.contains('contact-cards-list')) {
 
                     const children = entry.target.children;
                     Array.from(children).forEach((child, index) => {
@@ -37,7 +40,11 @@ function initializeScrollAnimations() {
     const animatedElements = document.querySelectorAll(`
         .about-content,
         .project-card,
-        .contact-card
+        .contact-card,
+        .timeline-card,
+        .skill-category,
+        .cert-card,
+        .stat-item
     `);
 
     animatedElements.forEach(el => {
@@ -69,6 +76,11 @@ function initializeCounters() {
                         requestAnimationFrame(updateCounter);
                     } else {
                         counter.textContent = target % 1 !== 0 ? target.toFixed(1) : target;
+                        // Add "+" suffix for projects and certifications
+                        const label = counter.nextElementSibling;
+                        if (label && (label.textContent.includes('Projects') || label.textContent.includes('Certifications'))) {
+                            counter.textContent = target + '+';
+                        }
                     }
                 };
 
@@ -92,10 +104,10 @@ function initializeTypingAnimation() {
 
     const titles = [
         'CSE Student',
-        'Data Science Aspirant',
+        'Aspiring Data Scientist',
+        'AI Engineer',
         'Data Analytics Enthusiast',
-        'Python Developer',
-        'Problem Solver'
+        'BI Developer'
     ];
 
     let titleIndex = 0;

@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Karan Kumar - Computer Science Engineering Student specializing in Data Science & Analytics. Portfolio showcasing projects and expertise.">
+        content="Karan Kumar is a Computer Science Engineering student focused on Data Science, Data Analytics, Artificial Intelligence, Power BI, Python, SQL, and data-driven applications.">
     <meta name="keywords"
-        content="Karan Kumar, Data Science, Data Analytics, Computer Science, Python, SQL, Machine Learning, Portfolio">
+        content="Karan Kumar, Data Science, Data Analytics, Artificial Intelligence, Machine Learning, Computer Science, Python, SQL, Power BI, Portfolio">
     <meta name="author" content="Karan Kumar">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Karan Kumar - Data Science & Analytics Portfolio">
-    <meta property="og:description" content="CSE Student | Data Science & Analytics Aspirant">
+    <meta property="og:title" content="Karan Kumar | Computer Science Engineering Student | Data Science & AI">
+    <meta property="og:description"
+        content="Karan Kumar is a Computer Science Engineering student focused on Data Science, Data Analytics, Artificial Intelligence, Power BI, Python, SQL, and data-driven applications.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/images/og.png">
 
-    <title>Karan Kumar - Data Science & Analytics Portfolio</title>
+    <title>Karan Kumar | Computer Science Engineering Student | Data Science & AI</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
@@ -37,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">
+            <a href="#home" class="nav-brand">
                 <img src="assets/images/profile/profile.jpg" alt="Karan Kumar" class="nav-logo">
             </a>
 
@@ -48,15 +49,21 @@
             </button>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
     <section id="home" class="hero-section">
         <div class="hero-background">
             <div class="gradient-blob blob-1"></div>
@@ -72,31 +79,42 @@
                         <span>Hello, I'm</span>
                     </p>
                     <h1 class="hero-name">
-                        <span class="name-part">Karan.</span>
+                        <span class="name-part">Karan Kumar</span>
                     </h1>
                     <div class="hero-title-container">
                         <h2 class="hero-title" id="typingText"></h2>
                         <span class="cursor">|</span>
                     </div>
                     <p class="hero-subtitle">
-                        Computer Science Engineering Student passionate about transforming data into insights
+                        I build data-driven solutions using Python, SQL, Power BI, and AI-assisted technologies,
+                        with a focus on analytics, business intelligence, and intelligent systems.
                     </p>
 
                     <div class="hero-cta">
-                        <a href="projects.html" class="btn btn-primary">
+                        <a href="#projects" class="btn btn-primary">
                             <span>View Projects</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
-                        <a href="contact.html" class="btn btn-outline">
-                            <span>Get In Touch</span>
+                        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Contact Me</span>
                         </a>
                     </div>
 
                     <div class="hero-social">
-                        <a href="mailto:karankr9237@gmail.com" class="social-link" aria-label="Email">
+                        <a href="mailto:karankumarm956@gmail.com" class="social-link" aria-label="Email">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
@@ -104,14 +122,7 @@
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                         </a>
-                        <a href="https://wa.me/919263427937" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="WhatsApp">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/karankumar75/" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.linkedin.com/in/Karankumar75" target="_blank" rel="noopener noreferrer"
                             class="social-link" aria-label="LinkedIn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path
@@ -157,19 +168,667 @@
         </div>
     </section>
 
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Computer Science Engineering Student building a career in Data Science & AI</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image-container">
+                    <img src="assets/images/profile/profile.jpg" alt="Karan Kumar" class="profile-image">
+                </div>
+
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm <strong>Karan Kumar</strong>, a Computer Science Engineering student at Sarla Birla University,
+                        Ranchi, focused on building a career in <strong>Data Science, Data Analytics, and Artificial Intelligence</strong>.
+                    </p>
+                    <p>
+                        With hands-on experience in hospital MIS reporting systems and financial analytics,
+                        I specialize in transforming raw data into actionable insights using <strong>Python, SQL, and Power BI</strong>.
+                        My projects have involved KPI monitoring, dashboard automation, and operational analytics
+                        that improved reporting efficiency by approximately 40%.
+                    </p>
+                    <p>
+                        I'm actively exploring AI/LLM-assisted development workflows and continuously
+                        expanding my skills in data engineering and machine learning. I approach every problem
+                        with analytical thinking and a commitment to data-driven decision-making.
+                    </p>
+
+                    <div class="resume-download">
+                        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="7.98">0</div>
+                    <div class="stat-label">Diploma CGPA</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="83.2">0</div>
+                    <div class="stat-label">Matriculation %</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Major Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Internships</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EDUCATION SECTION
+         ============================================ -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic journey</p>
+            </div>
+
+            <div class="timeline">
+                <!-- B.Tech -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot current"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Bachelor of Technology</h3>
+                                <p class="timeline-subtitle">Computer Science and Engineering</p>
+                                <p class="timeline-org">Sarla Birla University, Ranchi</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge current-badge">Current</span>
+                                <span class="timeline-date">2026 – 2029</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Joined through lateral entry. Currently pursuing B.Tech in CSE with focus on Data Science and AI.</p>
+                    </div>
+                </div>
+
+                <!-- Diploma -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot completed"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Diploma in Computer Science & Engineering</h3>
+                                <p class="timeline-org">BITT Polytechnic, Ranchi</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge cgpa-badge">CGPA: 7.98</span>
+                                <span class="timeline-date">2023 – 2026</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Completed 3-year diploma program with strong performance in Python Programming, Computer Networks, Operating Systems, and AI & Data Science.</p>
+                        <a href="about.html#education" class="timeline-link">
+                            <span>View Detailed Marks</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Matriculation -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot completed"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Matriculation (Class X)</h3>
+                                <p class="timeline-org">Prem Chand High School, Mesra, Ranchi</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge score-badge">83.2%</span>
+                                <span class="timeline-date">2022 – 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EXPERIENCE SECTION
+         ============================================ -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Professional internships and training</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Subros Limited -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot completed"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Trainee / Intern</h3>
+                                <p class="timeline-subtitle">Manufacturing Department</p>
+                                <p class="timeline-org">Subros Limited — Noida</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge work-badge">On-site</span>
+                                <span class="timeline-date">Feb 2026 – Apr 2026</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Prepared reports related to manufacturing operations</li>
+                            <li>Worked with manufacturing and quality-control data</li>
+                            <li>Assisted in preparing and organizing operational reports</li>
+                            <li>Developed understanding of manufacturing processes and quality-control practices</li>
+                            <li>Used data/reporting concepts to support operational analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sustainable EMS -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot completed"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-title">Data Analysis Intern</h3>
+                                <p class="timeline-org">Sustainable EMS Pvt. Limited</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge work-badge">On-site</span>
+                                <span class="timeline-date">Apr 2025 – Jun 2025</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Performed financial data analysis</li>
+                            <li>Cleaned and organized financial datasets</li>
+                            <li>Analysed bank statements</li>
+                            <li>Identified useful insights from financial transactions</li>
+                            <li>Worked with structured financial data for reporting and analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION
+         ============================================ -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                    </div>
+                </div>
+
+                <!-- Data Visualization & BI -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="12" width="4" height="9"></rect>
+                            <rect x="10" y="7" width="4" height="14"></rect>
+                            <rect x="17" y="3" width="4" height="18"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Data Visualization & BI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Microsoft Excel</span>
+                    </div>
+                </div>
+
+                <!-- Artificial Intelligence -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"></path>
+                            <path d="M16 15a4 4 0 0 1 4 4v2H4v-2a4 4 0 0 1 4-4"></path>
+                            <circle cx="12" cy="12" r="1"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Artificial Intelligence</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Artificial Intelligence</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">LLM-assisted Development</span>
+                    </div>
+                </div>
+
+                <!-- Computer Science -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Computer Science</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">Computer Fundamentals</span>
+                        <span class="skill-tag">Windows 11</span>
+                    </div>
+                </div>
+
+                <!-- Microsoft Office -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Microsoft Office</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MS Excel</span>
+                        <span class="skill-tag">MS Word</span>
+                        <span class="skill-tag">MS PowerPoint</span>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="skill-category glass-card glass-card-hover">
+                    <div class="skill-category-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="skill-category-title">Development Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Antigravity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION
+         ============================================ -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world data analytics solutions I've built</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Hospital MIS Dashboard -->
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="M6 8h2v5H6z"></path>
+                                <path d="M11 7h2v6h-2z"></path>
+                                <path d="M16 9h2v4h-2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hospital MIS Dashboard System</h3>
+                        <p class="project-description">
+                            Developed a complete MIS reporting system for hospital operations, providing centralized
+                            dashboards and automated reporting for management decision-making. Features include
+                            patient inflow dashboards, revenue analytics, doctor performance tracking, and automated
+                            daily/monthly report generation. Improved reporting efficiency and reduced manual
+                            reporting work by approximately 40%.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">KPI Monitoring</span>
+                            <span class="feature-tag">Dashboard Automation</span>
+                            <span class="feature-tag">Operational Analytics</span>
+                            <span class="feature-tag">Performance Tracking</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">LLM/AI-assisted</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Karan-Kumar-75" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Hospital Financial Analytics -->
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hospital Financial Analytics System</h3>
+                        <p class="project-description">
+                            Designed a hospital financial analytics system for tracking income, expenses, EMI obligations,
+                            profitability, and department-level financial performance. Built interactive dashboards for
+                            cash-flow monitoring, expense analysis, and revenue tracking. Enabled department-wise
+                            profitability analysis for data-driven financial decision-making.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Financial Analytics</span>
+                            <span class="feature-tag">Revenue Analysis</span>
+                            <span class="feature-tag">Cash-flow Analysis</span>
+                            <span class="feature-tag">Profitability Analysis</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Power BI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Karan-Kumar-75" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATIONS SECTION
+         ============================================ -->
+    <section id="certifications" class="section certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Professional certifications and credentials</p>
+            </div>
+
+            <div class="certifications-grid">
+                <!-- Data Analytics Certification -->
+                <div class="cert-card glass-card glass-card-hover">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Data Analytics Certification</h3>
+                        <p class="cert-issuer">KRISHAI Technologies Private Limited — Udemy</p>
+                    </div>
+                    <a href="https://www.udemy.com/certificate/UC-8c76f88c-5da6-484f-8910-db027ae23824/"
+                        target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Verify Certificate</span>
+                    </a>
+                </div>
+
+                <!-- Python Certification -->
+                <div class="cert-card glass-card glass-card-hover">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Python Certification</h3>
+                        <p class="cert-issuer">Dr. Angela Yu — Udemy</p>
+                    </div>
+                    <a href="https://www.udemy.com/certificate/UC-0d1c5c47-54a6-4c41-a239-4315dfba5cbd/"
+                        target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Verify Certificate</span>
+                    </a>
+                </div>
+
+                <!-- DCA Certification -->
+                <div class="cert-card glass-card glass-card-hover">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Diploma in Computer Applications</h3>
+                        <p class="cert-issuer">Kumar Institute of Vocational Study</p>
+                        <p class="cert-meta">Session: 2022–2023 &nbsp;|&nbsp; Serial No: KIVS/25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and collaborate</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        I'm always open to discussing new opportunities, collaborations, or conversations
+                        about data science and technology. Feel free to reach out!
+                    </p>
+
+                    <div class="contact-cards-list">
+                        <a href="mailto:karankumarm956@gmail.com" class="contact-card" id="contact-email">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>karankumarm956@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+917549024932" class="contact-card" id="contact-phone">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91-7549024932</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/Karankumar75" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/Karankumar75</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Karan-Kumar-75" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>github.com/Karan-Kumar-75</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-location">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Ranchi, India</span>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <h3 class="form-title">Send a Message</h3>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="formName">Name</label>
+                            <input type="text" id="formName" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Email</label>
+                            <input type="email" id="formEmail" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formSubject">Subject</label>
+                            <input type="text" id="formSubject" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Message</label>
+                            <textarea id="formMessage" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit-btn" id="formSubmitBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Karan Kumar</h3>
-                    <p>Data Science & Analytics Aspirant</p>
+                    <p>CSE Student | Aspiring Data Scientist & AI Engineer</p>
                 </div>
                 <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:karankumarm956@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Karankumar75" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Karan-Kumar-75" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
                 </div>
                 <div class="footer-bottom">
                     <p>&copy; 2026 Karan Kumar. Built with passion for data science.</p>
